@@ -274,9 +274,14 @@ public class Proyecto_ED2 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        String claveAIngresar = JOptionPane.showInputDialog("Escriba la palabra que desea buscar", null);
+        String claveAIngresar = JOptionPane.showInputDialog("Escriba la palabra que desea agregar", null);
+        if (diccionario.contiene(claveAIngresar) != null) {
+            JOptionPane.showMessageDialog(null, "La palabra que desea agregar ya se encuentra en el diccionario");
+        } else {
         String definicionAIngresar = JOptionPane.showInputDialog("Escriba la definicion de : " + claveAIngresar, null);
+        
         diccionario.insertar(claveAIngresar, definicionAIngresar);
+        }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
