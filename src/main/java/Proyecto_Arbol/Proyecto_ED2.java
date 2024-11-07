@@ -285,7 +285,7 @@ public class Proyecto_ED2 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        String claveEliminar = JOptionPane.showInputDialog("Escriba la palabra que desea buscar", null);
+        String claveEliminar = JOptionPane.showInputDialog("Escriba la palabra que desea eliminar", null);
 
         if (diccionario.contiene(claveEliminar) == null) {
             JOptionPane.showMessageDialog(null, "La palabra que desea eliminar no se encuentra en el diccionario");
