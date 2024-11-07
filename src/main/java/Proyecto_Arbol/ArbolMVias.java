@@ -365,12 +365,12 @@ public class ArbolMVias<K extends Comparable<K>, T> implements IArbolBusqueda<K,
             if (i == 0) {
                 recorridoPostOrden(nodoActual.getHijo(i), recorrido);
                 recorridoPostOrden(nodoActual.getHijo(i + 1), recorrido);
-                recorrido.add(nodoActual.getClave(i));
+
             } else {
                 recorridoPostOrden(nodoActual.getHijo(i + 1), recorrido);
-                recorrido.add(nodoActual.getClave(i));
-            }
 
+            }
+            recorrido.add(nodoActual.getClave(i));
         }
     }
 
@@ -475,7 +475,7 @@ public class ArbolMVias<K extends Comparable<K>, T> implements IArbolBusqueda<K,
 
     @Override
     public void vaciar() {
-      this.raiz=NodoMVias.nodoVacio();
+        this.raiz = NodoMVias.nodoVacio();
     }
 
 }
